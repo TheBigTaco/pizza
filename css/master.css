@@ -1,0 +1,24 @@
+body {
+  background-color: red;
+}
+
+h1 {
+  font-family: cursive;
+  font-weight: bolder;
+}
+
+.container {
+  background-color: orange;
+}
+
+.well {
+  background-color: darkorange;
+}
+
+.jumbotron {
+  background-image: url("../img/pizza.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1000px;
+  height: 120px;
+}
