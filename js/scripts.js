@@ -1,11 +1,17 @@
+function Pizza (size) {
+  this.toppings = [];
+  this.size = size;
+}
+
 $(document).ready(function(){
   $("#pizza").submit(function(event){
     event.preventDefault();
-    var toppings = [];
+    var size = $("#size").val();
+    var userPizza = new Pizza(size);
     $("input:checkbox[name=topping]:checked").each(function(){
       var checked = $(this).val();
-      toppings.push(checked);
+      userPizza.toppings.push(checked);
     });
-    alert(toppings);
+    $(".output").text("You have ordered a " + userPizza.size + " pizza. Your toppings are: " + userPizza.toppings);
   });
 });
