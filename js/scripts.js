@@ -20,6 +20,7 @@ $(document).ready(function(){
       userPizza.toppings.push(checked);
     });
     var price = userPizza.price();
-    $(".output").text("That will be $" + price + ".99");
+    $("#output").fadeIn();
+    $("#output").text("That will be $" + price + ".99");
   });
 });

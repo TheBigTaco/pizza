@@ -7,6 +7,10 @@ h1 {
   font-weight: bolder;
 }
 
+#output {
+  display: none;
+}
+
 label {
   font-weight: bold;
   font-family: monospace;
