@@ -3,6 +3,13 @@ function Pizza (size) {
   this.size = size;
 }
 
+Pizza.prototype.price = function(){
+  var toppingsPrice = this.toppings.length * 2;
+  var sizePrice = this.size * 2;
+  var finalPrice = toppingsPrice + sizePrice;
+  return finalPrice;
+}
+
 $(document).ready(function(){
   $("#pizza").submit(function(event){
     event.preventDefault();
@@ -12,6 +19,7 @@ $(document).ready(function(){
       var checked = $(this).val();
       userPizza.toppings.push(checked);
     });
-    $(".output").text("You have ordered a " + userPizza.size + " pizza. Your toppings are: " + userPizza.toppings);
+    var price = userPizza.price();
+    $(".output").text("That will be $" + price + ".99");
   });
 });
