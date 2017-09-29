@@ -7,6 +7,11 @@ h1 {
   font-weight: bolder;
 }
 
+label {
+  font-weight: bold;
+  font-family: monospace;
+}
+
 .container {
   background-color: orange;
 }
